@@ -1,0 +1,164 @@
+@mixin m-input {
+  input {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    //    color: crimson;
+    border: none;
+    outline-style: none;
+    font-size: 1.2em;
+  }
+  i {
+    margin: 5px;
+    padding: 5px;
+    color: blue;
+    margin-right: 0px;
+  }
+}
+
+body {
+  background: linear-gradient(
+    to top,
+    rgb(121, 18, 18),
+    rgb(97, 49, 49),
+    rgb(116, 39, 54)
+  );
+}
+.wrapper {
+  //   background: #333;
+  border-radius: 10px;
+  text-align: center;
+  h2 {
+    // text-align: center;
+    color: rgb(118, 118, 194);
+    letter-spacing: 0.2em;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  form {
+    margin: 10px;
+    border: #fff 1px solid;
+    border-radius: 5px;
+    &:hover {
+      box-shadow: 0 0 5px grey;
+    }
+    h4 {
+      letter-spacing: 0.112em;
+      margin-top: 10px;
+      font-size: 1.4em;
+      color: lightgrey;
+    }
+    .input-group {
+      margin: 10px;
+      .input-box {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+          color: #333;
+          width: 200px;
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    .input-group:nth-of-type(1) {
+      //   background: crimson;
+      position: relative;
+      padding: 10px;
+      @include m-input();
+    }
+    .input-group:nth-of-type(2) {
+      //   background: crimson;
+      @include m-input();
+    }
+    // date and gender
+    .input-group:nth-of-type(3) {
+      .input-box {
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      @include m-input();
+      .input-box:nth-of-type(2) {
+        input[type="radio"] {
+          width: 30px;
+          height: 20px;
+        }
+        label {
+          align-self: center;
+          font-size: 1.4em;
+        }
+      }
+    } // end date and gender
+
+    .input-group:nth-of-type(4) {
+      margin-bottom: 30px;
+      .input-box {
+        margin-top: 30px;
+        display: inline;
+        h4 {
+          margin-top: 20px;
+        }
+      }
+      input[type="radio"] {
+        width: 30px;
+        height: 20px;
+      }
+      i {
+        padding: 5px;
+        margin-right: 0px;
+        font-size: 1.4em;
+      }
+    }
+    .input-group:nth-of-type(5),
+    .input-group:nth-of-type(6) {
+      margin-bottom: 30px;
+      .input-box {
+        margin-top: 30px;
+        // display: inline;
+        h4 {
+          margin-top: 20px;
+        }
+
+        select {
+          padding: 10px;
+          border-radius: 5px;
+          font-size: 1em;
+          margin: 2px;
+          outline-style: none;
+        }
+      }
+      @include m-input();
+      i {
+        font-size: 1.4em;
+      }
+    }
+    .input-group:nth-of-type(7) {
+      button {
+        padding: 10px;
+        width: 150px;
+        background: rgb(15, 91, 153);
+        border-radius: 25px;
+        border: none;
+        font-size: 1.5em;
+        outline-style: none;
+        transition: 1s ease;
+        &:hover {
+          cursor: pointer;
+          background: #fff;
+          color: blue;
+        }
+        @media screen and (min-width: 360px) {
+          width: 100%;
+        }
+        @media screen and (min-width: 500px) {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
