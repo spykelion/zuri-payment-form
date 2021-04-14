@@ -1,5 +1,13 @@
+@font-face {
+  font-family: "ubuntu";
+  src: url("../Ubuntu-Regular.ttf");
+}
+* {
+  font-family: "ubuntu";
+}
+
 body {
-  background: linear-gradient(to top, #791212, #613131, #742736);
+  background: #c9411f;
 }
 
 .wrapper {
@@ -7,10 +15,10 @@ body {
   text-align: center;
 }
 .wrapper h2 {
-  color: #7676c2;
+  color: #d8d8e7;
   letter-spacing: 0.2em;
   font-size: 2em;
-  font-weight: bold;
+  font-weight: bolder;
 }
 .wrapper form {
   margin: 10px;
@@ -24,7 +32,9 @@ body {
   letter-spacing: 0.112em;
   margin-top: 10px;
   font-size: 1.4em;
-  color: lightgrey;
+  color: black;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
 .wrapper form .input-group {
   margin: 10px;
@@ -37,7 +47,7 @@ body {
 .wrapper form .input-group .input-box input[type=text],
 .wrapper form .input-group .input-box input[type=email],
 .wrapper form .input-group .input-box input[type=tel] {
-  color: #333;
+  color: #1b1818;
   width: 200px;
   font-size: 1.2em;
 }

@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'ubuntu';
+  src: url('../Ubuntu-Regular.ttf');
+}
+
 @mixin m-input {
   input {
     margin: 5px;
@@ -16,13 +21,12 @@
   }
 }
 
+* {
+  font-family: 'ubuntu';
+}
+
 body {
-  background: linear-gradient(
-    to top,
-    rgb(121, 18, 18),
-    rgb(97, 49, 49),
-    rgb(116, 39, 54)
-  );
+  background: rgb(201, 65, 31);
 }
 .wrapper {
   //   background: #333;
@@ -30,12 +34,15 @@ body {
   text-align: center;
   h2 {
     // text-align: center;
-    color: rgb(118, 118, 194);
+    color: rgb(216, 216, 231);
     letter-spacing: 0.2em;
     font-size: 2em;
-    font-weight: bold;
+    font-weight: bolder;
   }
   form {
+
+    @media screen and (min-width: 624px) {
+    }
     margin: 10px;
     border: #fff 1px solid;
     border-radius: 5px;
@@ -46,7 +53,9 @@ body {
       letter-spacing: 0.112em;
       margin-top: 10px;
       font-size: 1.4em;
-      color: lightgrey;
+      color: rgb(0, 0, 0);
+      font-weight: bolder;
+    text-transform: uppercase;
     }
     .input-group {
       margin: 10px;
@@ -58,7 +67,7 @@ body {
         input[type="text"],
         input[type="email"],
         input[type="tel"] {
-          color: #333;
+          color: rgb(27, 24, 24);
           width: 200px;
           font-size: 1.2em;
         }
