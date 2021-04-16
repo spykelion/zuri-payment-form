@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'ubuntu';
-  src: url('../Ubuntu-Regular.ttf');
+  font-family: "ubuntu";
+  src: url("../Ubuntu-Regular.ttf");
 }
 
 @mixin m-input {
@@ -22,7 +22,7 @@
 }
 
 * {
-  font-family: 'ubuntu';
+  font-family: "ubuntu";
   // box-sizing: border-box;
 }
 
@@ -59,7 +59,7 @@ body {
     @media screen and (min-width: 624px) {
       margin: auto 5rem;
     }
-   
+
     margin: 10px;
     border: #fff 1px solid;
     border-radius: 5px;
@@ -79,7 +79,7 @@ body {
       box-sizing: border-box;
       margin: 0;
     }
-    >h4{
+    > h4 {
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
       width: 100%;
@@ -129,7 +129,7 @@ body {
     }
     .input-group:nth-of-type(2) {
       //   background: crimson;
-      
+
       @include m-input();
       .input-box {
         background: #3333;
@@ -159,18 +159,18 @@ body {
         margin-left: 0;
         margin-right: 0;
         @media screen and (min-width: 360px) and (max-width: 860px) {
-            width: 100%;
-             input[placeholder="DD"]{
+          width: 100%;
+          input[placeholder="DD"] {
             width: 20%;
           }
-           input[placeholder="MM"]{
-          width: 20%;
-        }
-        input[placeholder="YYY"]{
-          width: 20%;
-        }
+          input[placeholder="MM"] {
+            width: 20%;
           }
-        
+          input[placeholder="YYY"] {
+            width: 20%;
+          }
+        }
+
         h4 {
           margin-left: 0;
           margin-right: 0;
@@ -197,7 +197,7 @@ body {
       label {
         span {
           i {
-            font-family: 'ubuntu';
+            font-family: "ubuntu";
             font-size: 1.5em;
           }
         }
@@ -213,7 +213,8 @@ body {
       }
 
       @media screen and (min-width: 360px) and (max-width: 500px) {
-        .bc1, .bc2 {
+        .bc1,
+        .bc2 {
           padding: 0;
           width: 100%;
         }
@@ -255,13 +256,13 @@ body {
         font-size: 1.4em;
       }
     }
-    .input-group:nth-of-type(5){
+    .input-group:nth-of-type(5) {
       width: fit-content;
       .input-box {
-          background: #3333;
-          border-radius: 3px;
-          margin: 2px;
-   
+        background: #3333;
+        border-radius: 3px;
+        margin: 2px;
+
         input {
           width: 210px + 183px;
         }
@@ -271,7 +272,7 @@ body {
       display: flex;
       justify-content: center;
       align-content: center;
-     >.input-box {
+      > .input-box {
         background: #3333;
         border-radius: 3px;
         margin: 2px;
@@ -281,29 +282,27 @@ body {
       width: 100%;
       .input-box {
         width: 100%;
-       button {
-        padding: 10px;
-        width: 50%;
-        background: crimson;
-        border-radius: 25px;
-        border: none;
-        font-size: 1.5em;
-        outline-style: none;
-        transition: 1s ease;
-        color: #fff;
-        // text-transform: uppercase;
-        letter-spacing: 2px;
-        @media screen and (min-width: 700px) {
-          width: 300px;
+        button {
+          padding: 10px;
+          width: 50%;
+          background: crimson;
+          border-radius: 25px;
+          border: none;
+          font-size: 1.5em;
+          outline-style: none;
+          transition: 1s ease;
+          color: #fff;
+          // text-transform: uppercase;
+          letter-spacing: 2px;
+          @media screen and (min-width: 700px) {
+            width: 300px;
+          }
+          &:hover {
+            cursor: pointer;
+            background: rgb(141, 22, 46);
+          }
         }
-        &:hover {
-          cursor: pointer;
-          background: rgb(141, 22, 46);
-        }
-
-      } 
       }
-      
     }
   }
 }

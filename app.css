@@ -220,7 +220,8 @@ body {
   padding: 5px;
 }
 @media screen and (min-width: 360px) and (max-width: 500px) {
-  .wrapper form .input-group:nth-of-type(4) .bc1, .wrapper form .input-group:nth-of-type(4) .bc2 {
+  .wrapper form .input-group:nth-of-type(4) .bc1,
+.wrapper form .input-group:nth-of-type(4) .bc2 {
     padding: 0;
     width: 100%;
   }
