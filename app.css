@@ -7,7 +7,8 @@
 }
 
 body {
-  background: #c9411f;
+  background: #fff;
+  text-align: center;
 }
 
 .wrapper {
@@ -15,26 +16,54 @@ body {
   text-align: center;
 }
 .wrapper h2 {
-  color: #d8d8e7;
+  color: crimson;
   letter-spacing: 0.2em;
   font-size: 2em;
   font-weight: bolder;
 }
 .wrapper form {
+  background: #3333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+  padding: 15px;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin: auto;
   margin: 10px;
   border: #fff 1px solid;
   border-radius: 5px;
+}
+@media screen and (min-width: 624px) {
+  .wrapper form {
+    margin: auto 5rem;
+  }
 }
 .wrapper form:hover {
   box-shadow: 0 0 5px grey;
 }
 .wrapper form h4 {
   letter-spacing: 0.112em;
-  margin-top: 10px;
   font-size: 1.4em;
-  color: black;
+  color: #fff;
   font-weight: bolder;
   text-transform: uppercase;
+  margin: 0;
+  padding: 1.5rem;
+  background: crimson;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+.wrapper form > h4 {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
 }
 .wrapper form .input-group {
   margin: 10px;
@@ -50,10 +79,12 @@ body {
   color: #1b1818;
   width: 200px;
   font-size: 1.2em;
+  caret-color: crimson;
 }
 .wrapper form .input-group:nth-of-type(1) {
   position: relative;
   padding: 10px;
+  margin: auto 2rem;
 }
 .wrapper form .input-group:nth-of-type(1) input {
   margin: 5px;
@@ -66,8 +97,25 @@ body {
 .wrapper form .input-group:nth-of-type(1) i {
   margin: 5px;
   padding: 5px;
-  color: blue;
+  color: crimson;
   margin-right: 0px;
+}
+.wrapper form .input-group:nth-of-type(1) .input-box {
+  background: #3333;
+  border-radius: 3px;
+  margin: 2px;
+}
+@media screen and (min-width: 700px) {
+  .wrapper form .input-group:nth-of-type(1) {
+    display: flex;
+    width: 100%;
+  }
+  .wrapper form .input-group:nth-of-type(1) .input-box {
+    width: 100%;
+  }
+  .wrapper form .input-group:nth-of-type(1) .input-box input {
+    width: 100%;
+  }
 }
 .wrapper form .input-group:nth-of-type(2) input {
   margin: 5px;
@@ -80,13 +128,55 @@ body {
 .wrapper form .input-group:nth-of-type(2) i {
   margin: 5px;
   padding: 5px;
-  color: blue;
+  color: crimson;
   margin-right: 0px;
+}
+.wrapper form .input-group:nth-of-type(2) .input-box {
+  background: #3333;
+  border-radius: 3px;
+  margin: 2px;
+}
+@media screen and (min-width: 700px) {
+  .wrapper form .input-group:nth-of-type(2) {
+    width: 100%;
+  }
+  .wrapper form .input-group:nth-of-type(2) .input-box {
+    width: auto;
+  }
+  .wrapper form .input-group:nth-of-type(2) .input-box input {
+    width: 100%;
+  }
+}
+.wrapper form .input-group:nth-of-type(3) {
+  margin-left: 0;
+  margin-right: 0;
+  border: 1px solid #fff;
+  width: 100%;
 }
 .wrapper form .input-group:nth-of-type(3) .input-box {
   display: block;
   margin-top: 30px;
   margin-bottom: 30px;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media screen and (min-width: 360px) and (max-width: 860px) {
+  .wrapper form .input-group:nth-of-type(3) .input-box {
+    width: 100%;
+  }
+  .wrapper form .input-group:nth-of-type(3) .input-box input[placeholder=DD] {
+    width: 20%;
+  }
+  .wrapper form .input-group:nth-of-type(3) .input-box input[placeholder=MM] {
+    width: 20%;
+  }
+  .wrapper form .input-group:nth-of-type(3) .input-box input[placeholder=YYY] {
+    width: 20%;
+  }
+}
+.wrapper form .input-group:nth-of-type(3) .input-box h4 {
+  margin-left: 0;
+  margin-right: 0;
 }
 .wrapper form .input-group:nth-of-type(3) input {
   margin: 5px;
@@ -99,7 +189,7 @@ body {
 .wrapper form .input-group:nth-of-type(3) i {
   margin: 5px;
   padding: 5px;
-  color: blue;
+  color: crimson;
   margin-right: 0px;
 }
 .wrapper form .input-group:nth-of-type(3) .input-box:nth-of-type(2) input[type=radio] {
@@ -112,6 +202,28 @@ body {
 }
 .wrapper form .input-group:nth-of-type(4) {
   margin-bottom: 30px;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+.wrapper form .input-group:nth-of-type(4) label span i {
+  font-family: "ubuntu";
+  font-size: 1.5em;
+}
+.wrapper form .input-group:nth-of-type(4) i {
+  border-radius: 3px;
+  background: grey;
+}
+.wrapper form .input-group:nth-of-type(4) i::before {
+  color: crimson;
+  margin-right: 5px;
+  padding: 5px;
+}
+@media screen and (min-width: 360px) and (max-width: 500px) {
+  .wrapper form .input-group:nth-of-type(4) .bc1, .wrapper form .input-group:nth-of-type(4) .bc2 {
+    padding: 0;
+    width: 100%;
+  }
 }
 .wrapper form .input-group:nth-of-type(4) .input-box {
   margin-top: 30px;
@@ -119,6 +231,7 @@ body {
 }
 .wrapper form .input-group:nth-of-type(4) .input-box h4 {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 .wrapper form .input-group:nth-of-type(4) input[type=radio] {
   width: 30px;
@@ -131,15 +244,7 @@ body {
 }
 .wrapper form .input-group:nth-of-type(5),
 .wrapper form .input-group:nth-of-type(6) {
-  margin-bottom: 30px;
-}
-.wrapper form .input-group:nth-of-type(5) .input-box,
-.wrapper form .input-group:nth-of-type(6) .input-box {
-  margin-top: 30px;
-}
-.wrapper form .input-group:nth-of-type(5) .input-box h4,
-.wrapper form .input-group:nth-of-type(6) .input-box h4 {
-  margin-top: 20px;
+  width: 100%;
 }
 .wrapper form .input-group:nth-of-type(5) .input-box select,
 .wrapper form .input-group:nth-of-type(6) .input-box select {
@@ -162,35 +267,60 @@ body {
 .wrapper form .input-group:nth-of-type(6) i {
   margin: 5px;
   padding: 5px;
-  color: blue;
+  color: crimson;
   margin-right: 0px;
 }
 .wrapper form .input-group:nth-of-type(5) i,
 .wrapper form .input-group:nth-of-type(6) i {
   font-size: 1.4em;
 }
-.wrapper form .input-group:nth-of-type(7) button {
+.wrapper form .input-group:nth-of-type(5) {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.wrapper form .input-group:nth-of-type(5) .input-box {
+  background: #3333;
+  border-radius: 3px;
+  margin: 2px;
+}
+.wrapper form .input-group:nth-of-type(5) .input-box input {
+  width: 393px;
+}
+.wrapper form .input-group:nth-of-type(6) {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.wrapper form .input-group:nth-of-type(6) > .input-box {
+  background: #3333;
+  border-radius: 3px;
+  margin: 2px;
+}
+.wrapper form .input-group:nth-of-type(7) {
+  width: 100%;
+}
+.wrapper form .input-group:nth-of-type(7) .input-box {
+  width: 100%;
+}
+.wrapper form .input-group:nth-of-type(7) .input-box button {
   padding: 10px;
-  width: 150px;
-  background: #0f5b99;
+  width: 50%;
+  background: crimson;
   border-radius: 25px;
   border: none;
   font-size: 1.5em;
   outline-style: none;
   transition: 1s ease;
+  color: #fff;
+  letter-spacing: 2px;
 }
-.wrapper form .input-group:nth-of-type(7) button:hover {
+@media screen and (min-width: 700px) {
+  .wrapper form .input-group:nth-of-type(7) .input-box button {
+    width: 300px;
+  }
+}
+.wrapper form .input-group:nth-of-type(7) .input-box button:hover {
   cursor: pointer;
-  background: #fff;
-  color: blue;
-}
-@media screen and (min-width: 360px) {
-  .wrapper form .input-group:nth-of-type(7) button {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 500px) {
-  .wrapper form .input-group:nth-of-type(7) button {
-    width: 150px;
-  }
+  background: #8d162e;
 }
